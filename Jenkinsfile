@@ -9,13 +9,13 @@ pipeline {
 
     stage('compile') {
       steps {
-        sh 'sh \'mvn clean install\''
+        sh 'mvn clean install'
       }
     }
 
     stage('build') {
       steps {
-        sh 'sh \'mvn clean package\''
+        sh 'mvn clean package'
       }
     }
 
