@@ -7,15 +7,15 @@ pipeline {
       }
     }
 
-    stage('test') {
+    stage('compile') {
       steps {
-        sh 'sh \'mvn clean\''
+        sh 'sh \'mvn clean install\''
       }
     }
 
     stage('build') {
       steps {
-        sh 'sh \'mvn package\''
+        sh 'sh \'mvn clean package\''
       }
     }
 
